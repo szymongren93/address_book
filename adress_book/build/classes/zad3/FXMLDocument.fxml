@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="253.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zad3.FXMLDocumentController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="252.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Name: " />
+                        <TextField fx:id="imieIn" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Number: " />
+                        <TextField fx:id="numerIn" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="add" mnemonicParsing="false" onAction="#dodaj" text="Add" />
+                        <Button fx:id="modify" mnemonicParsing="false" onAction="#modyfikuj" text="Modify" />
+                        <Button fx:id="delete" mnemonicParsing="false" onAction="#usun" text="Delete" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children></VBox>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tabela" onMouseClicked="#wyswietl" prefHeight="200.0" prefWidth="252.0">
+                    <columns>
+                      <TableColumn fx:id="imie" prefWidth="150.0" text="Name" />
+                      <TableColumn fx:id="numer" prefWidth="100.0" text="Phone" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>
